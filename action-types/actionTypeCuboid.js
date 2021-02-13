@@ -1,0 +1,3 @@
+export const CUBOID_LENGTH = "CUBOID_LENGTH";
+export const CUBOID_BASE = "CUBOID_BASE";
+export const CUBOID_HEIGHT = "CUBOID_HEIGHT";

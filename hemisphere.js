@@ -1,5 +1,4 @@
-import { HEMISPHERE } from "../action-types/actionTypeHemisphere.js";
-import { hemiSphere } from "../actions/actionHemisphere.js";
+import { createStore } from "redux";
 
 const initState = {
 	r: 0,
@@ -8,9 +7,9 @@ const initState = {
 	total: 0,
 }
 
-export const reducerHemisphere =(state = initState, action) => {
+const reducer =(state = initState, action) => {
 	switch(action.type){
-		case HEMISPHERE:
+		case "HEMISPHERE":
 			return{
 				...state,
 				r: state.r + 1,
@@ -22,3 +21,11 @@ export const reducerHemisphere =(state = initState, action) => {
 			return state
 	}
 }
+
+const store = createStore(reducer);
+
+store.subscribe(() => {
+	console.log(store.getState());
+});
+
+store.dispatch({ type: "HEMISPHERE"});
