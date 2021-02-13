@@ -5,16 +5,15 @@ import { reducerCube } from "./reducerCube.js";
 import { reducerCuboid } from "./reducerCuboid.js";
 import { reducerCylinder } from "./reducerCylinder.js";
 import { reducerSphere } from "./reducerSphere.js";
-import { reducerHemisphere } from "./reducerHemisphere";
+import { reducerHemi } from "./reducerHemisphere.js";
 
 const rootReducer = combineReducers({
-    hemi: reducerHemisphere,
     reducerCone,
     reducerCube,
     reducerCuboid,
     reducerCylinder,
     reducerSphere,
-    reducerHemisphere,
+    reducerHemi,
 })
 
 export const store = createStore(rootReducer);
